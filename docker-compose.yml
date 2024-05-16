@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  api-postgres:
+    image: postgres:15.3
+    restart: always
+    environment:
+      POSTGRES_USER: cripto
+      POSTGRES_PASSWORD: cripto
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres-data:/var/lib/postgresql/data
